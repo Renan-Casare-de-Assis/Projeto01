@@ -73,9 +73,9 @@ export default function LoginPage() {
               <div className="flex gap-3 mt-4">
                 <button className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07c0 5.02 3.66 9.18 8.44 9.93v-7.02H8.08v-2.9h2.36V9.41c0-2.33 1.39-3.62 3.52-3.62 1.02 0 2.09.18 2.09.18v2.29h-1.17c-1.15 0-1.51.72-1.51 1.46v1.74h2.57l-.41 2.9h-2.16v7.02C18.34 21.25 22 17.09 22 12.07z" />
+                    <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2V12h2.2V9.8c0-2.1 1.3-3.3 3.2-3.3.9 0 1.8.16 1.8.16v2h-1c-1 0-1.3.62-1.3 1.3V12h2.2l-.35 2.9h-1.85v7A10 10 0 0022 12z" />
                   </svg>
-                  Github
+                  Facebook
                 </button>
 
                 <button className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20">
