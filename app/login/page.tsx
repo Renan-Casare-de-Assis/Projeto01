@@ -6,9 +6,9 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#AFC0C2] via-[#9EB6B8] to-[#7EA0A2] p-8">
-      <div className="w-full max-w-4xl rounded-3xl p-8 bg-gradient-to-br from-[#AFC0C2]/30 via-[#9EB6B8]/25 to-[#7EA0A2]/20 shadow-2xl">
-        <div className="relative rounded-2xl bg-[#ffffff1a] backdrop-blur-md border border-white/20 p-10">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#4f4f4f] via-[#3f3f3f] to-[#2f2f2f] p-8">
+      <div className="w-full max-w-4xl rounded-3xl p-8 bg-gradient-to-br from-[#4f4f4f]/25 via-[#3f3f3f]/20 to-[#2f2f2f]/15 shadow-2xl">
+        <div className="relative rounded-2xl bg-white/6 backdrop-blur-md border border-white/10 p-10">
           <h1 className="text-4xl font-extrabold text-white mb-2">Bem-vindo</h1>
           <p className="text-white/80 mb-8">Entre com sua conta</p>
 
@@ -68,7 +68,7 @@ export default function LoginPage() {
                 <a href="#" className="hover:underline hover:text-white/95 transition-colors">Esqueceu a senha?</a>
               </div>
 
-              <button className="w-full bg-white rounded-xl py-4 font-semibold text-[#2b4b4b] shadow-lg mt-4 hover:shadow-2xl hover:scale-[1.02] transition transform cursor-pointer">Entrar</button>
+              <button className="w-full bg-white rounded-xl py-4 font-semibold text-[#333333] shadow-lg mt-4 hover:shadow-2xl hover:scale-[1.02] transition transform cursor-pointer">Entrar</button>
 
               <div className="flex gap-3 mt-4">
                 <button className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20 group hover:bg-white/20 hover:scale-[1.02] transition transform cursor-pointer">
