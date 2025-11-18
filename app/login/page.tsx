@@ -1,9 +1,28 @@
 "use client";
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
+  const router = useRouter();
+
+  function handleLogin() {
+    // replace with real auth flow later
+    router.push('/home');
+  }
+
+  function handleFacebook() {
+    router.push('/auth/facebook');
+  }
+
+  function handleGoogle() {
+    router.push('/auth/google');
+  }
+
+  function handleSignup() {
+    router.push('/signup');
+  }
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#4f4f4f] via-[#3f3f3f] to-[#2f2f2f] p-8">
@@ -65,26 +84,59 @@ export default function LoginPage() {
                   <input type="checkbox" className="w-4 h-4 rounded cursor-pointer" />
                   Lembrar-me
                 </label>
-                <a href="#" className="hover:underline hover:text-white/95 transition-colors">Esqueceu a senha?</a>
+                <a
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    router.push('/forgot');
+                  }}
+                  className="hover:underline hover:text-white/95 transition-colors"
+                >
+                  Esqueceu a senha?
+                </a>
               </div>
 
-              <button className="w-full bg-white rounded-xl py-4 font-semibold text-[#333333] shadow-lg mt-4 hover:shadow-2xl hover:scale-[1.02] transition transform cursor-pointer">Entrar</button>
+              <button
+                type="button"
+                onClick={handleLogin}
+                className="w-full bg-white rounded-xl py-4 font-semibold text-[#333333] shadow-lg mt-4 hover:shadow-2xl hover:scale-[1.02] transition transform cursor-pointer"
+              >
+                Entrar
+              </button>
 
               <div className="flex gap-3 mt-4">
-                <button className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20 group hover:bg-white/20 hover:scale-[1.02] transition transform cursor-pointer">
+                <button
+                  type="button"
+                  onClick={handleFacebook}
+                  className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20 group hover:bg-white/20 hover:scale-[1.02] transition transform cursor-pointer"
+                >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2V12h2.2V9.8c0-2.1 1.3-3.3 3.2-3.3.9 0 1.8.16 1.8.16v2h-1c-1 0-1.3.62-1.3 1.3V12h2.2l-.35 2.9h-1.85v7A10 10 0 0022 12z" />
                   </svg>
                   <span className="group-hover:text-white transition-colors">Facebook</span>
                 </button>
 
-                <button className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20 group hover:bg-white/20 hover:scale-[1.02] transition transform cursor-pointer">
+                <button
+                  type="button"
+                  onClick={handleGoogle}
+                  className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20 group hover:bg-white/20 hover:scale-[1.02] transition transform cursor-pointer"
+                >
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
                     <path d="M12 7v3h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M16 12a4 4 0 11-8 0" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                   <span className="group-hover:text-white transition-colors">Google</span>
+                </button>
+              </div>
+              <div className="mt-4 text-center text-white/80">
+                <span className="text-sm">Não tem uma conta?</span>
+                <button
+                  type="button"
+                  onClick={handleSignup}
+                  className="ml-2 text-sm font-semibold text-white underline-offset-2 hover:underline"
+                >
+                  Cadastre-se
                 </button>
               </div>
             </div>
