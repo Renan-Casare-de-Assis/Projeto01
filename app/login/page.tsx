@@ -24,7 +24,7 @@ export default function LoginPage() {
                 <input
                   type="email"
                   placeholder="Email"
-                  className="w-full bg-white/20 text-white placeholder-white/70 rounded-xl py-4 pl-12 pr-4 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
+                  className="w-full bg-white/20 text-white placeholder-white/70 rounded-xl py-4 pl-12 pr-4 border border-white/20 hover:border-white/30 focus:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 transition-colors"
                 />
               </div>
 
@@ -38,12 +38,12 @@ export default function LoginPage() {
                 <input
                   type={showPassword ? 'text' : 'password'}
                   placeholder="Senha"
-                  className="w-full bg-white/20 text-white placeholder-white/70 rounded-xl py-4 pl-12 pr-12 border border-white/20 focus:outline-none focus:ring-2 focus:ring-white/30"
+                  className="w-full bg-white/20 text-white placeholder-white/70 rounded-xl py-4 pl-12 pr-12 border border-white/20 hover:border-white/30 focus:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/30 transition-colors"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-white/80"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-white/80 hover:text-white transition-colors cursor-pointer"
                   aria-label="Toggle password visibility"
                 >
                   {showPassword ? (
@@ -61,30 +61,30 @@ export default function LoginPage() {
               </div>
 
               <div className="flex items-center justify-between text-white/80 text-sm">
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-4 h-4 rounded" />
+                <label className="flex items-center gap-2 cursor-pointer hover:text-white/95">
+                  <input type="checkbox" className="w-4 h-4 rounded cursor-pointer" />
                   Lembrar-me
                 </label>
-                <a href="#" className="hover:underline">Esqueceu a senha?</a>
+                <a href="#" className="hover:underline hover:text-white/95 transition-colors">Esqueceu a senha?</a>
               </div>
 
-              <button className="w-full bg-white rounded-xl py-4 font-semibold text-[#2b4b4b] shadow-lg mt-4">Entrar</button>
+              <button className="w-full bg-white rounded-xl py-4 font-semibold text-[#2b4b4b] shadow-lg mt-4 hover:shadow-2xl hover:scale-[1.02] transition transform cursor-pointer">Entrar</button>
 
               <div className="flex gap-3 mt-4">
-                <button className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20">
+                <button className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20 group hover:bg-white/20 hover:scale-[1.02] transition transform cursor-pointer">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2V12h2.2V9.8c0-2.1 1.3-3.3 3.2-3.3.9 0 1.8.16 1.8.16v2h-1c-1 0-1.3.62-1.3 1.3V12h2.2l-.35 2.9h-1.85v7A10 10 0 0022 12z" />
                   </svg>
-                  Facebook
+                  <span className="group-hover:text-white transition-colors">Facebook</span>
                 </button>
 
-                <button className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20">
+                <button className="flex-1 bg-white/10 text-white backdrop-blur rounded-xl py-3 flex items-center justify-center gap-3 border border-white/20 group hover:bg-white/20 hover:scale-[1.02] transition transform cursor-pointer">
                   <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="12" cy="12" r="9" stroke="currentColor" strokeWidth="1.6" />
                     <path d="M12 7v3h3" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                     <path d="M16 12a4 4 0 11-8 0" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
-                  Google
+                  <span className="group-hover:text-white transition-colors">Google</span>
                 </button>
               </div>
             </div>
